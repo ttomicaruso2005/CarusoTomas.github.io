@@ -1,0 +1,924 @@
+/* styles.clean.exact.css - cleaned, safe version (no HTML changes required) */
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s cubic-bezier(.22,.68,.3,1);
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  border-radius: 15px;
+  overflow: visible;
+  transform-origin: center center;
+  -webkit-transform-style: preserve-3d;
+}
+
+html {
+  scroll-behavior: smooth}
+
+/* === CAROUSEL — MANTENER ALTURA FIJA SIN APLANARSE === */
+.carousel-item img {
+  width: 100%;
+  height: auto;             /* vuelve al tamaño natural */
+  object-fit: cover;        /* se recorta sin dejar fondo */
+  object-position: center center;
+  display: block;
+  margin: 0;
+  position: relative;
+  z-index: 0}
+
+.carousel-item {
+  position: relative}
+
+.carousel-section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden}
+
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* capa negra suave sobre la imagen */
+  z-index: 1; /* va por encima de la imagen */
+  pointer-events: none}
+
+.carousel-caption {
+  position: absolute;
+  z-index: 2; /* texto por encima de la sombra */
+}
+
+.carousel-caption h5 {
+  font-size: 2.2rem;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9); /* sombra más intensa */
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85); /* más fuerte también */
+}
+
+/* === BANNERS PARA PANTALLAS CHICAS (revisión) === */
+@media (max-width: 767px) {
+
+  /* 1️⃣ Ocultamos completamente las imágenes originales del carrusel */
+  .carousel-item img {
+    display: none !important;
+    height: 60vh;
+    object-fit: cover;
+    background-color: #000}
+
+  /* 2️⃣ Creamos banners más cuadrados con fondo propio */
+  .carousel-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* cuadrado */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden}
+
+  /* Reemplazamos las imágenes de fondo */
+  .carousel-item:nth-child(1) {
+    background-image: url("assets/img/slide_pequeño_1.jpg")}
+  .carousel-item:nth-child(2) {
+    background-image: url("assets/img/slide_pequeño_2.jpg")}
+  .carousel-item:nth-child(3) {
+    background-image: url("assets/img/slide_pequeño_3.jpg")}
+
+  /* 3️⃣ Aseguramos que el texto quede por encima y visible */
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 85%;
+    color: #fff;
+    z-index: 5; /* más alto que la imagen de fondo */
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8)}
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.75)}
+
+  /* (opcional) capa oscura sutil para mejorar legibilidad */
+  .carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1}
+
+  /* aseguramos que el caption quede por encima de esa capa */
+  .carousel-caption {
+    z-index: 2}
+}
+
+#nota strong {
+  color: #7a4fa3;
+  font-weight: 700}
+
+#nota em {
+  color: #7a4fa3;
+  font-style: italic}
+
+#reseñas h2 {
+  color: #fff !important;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 1px}
+
+.team-boxed {
+  color:#ddd}
+
+.team-boxed p {
+  color:#bcbcbc}
+
+.team-boxed h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:inherit}
+
+@media (max-width:767px) {
+  .team-boxed h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size: 1.5rem}
+}
+
+.team-boxed .intro {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto}
+
+.team-boxed .intro p {
+  margin-bottom:0}
+
+.team-boxed .people {
+  padding:50px 0}
+
+/* 🔹 Asegurar igual altura de las cajas de reseñas */
+#reseñas .people {
+  align-items: stretch !important; /* todas las columnas igual altura */
+}
+
+#reseñas .people .item {
+  display: flex}
+
+#reseñas .people .item .box {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%; /* se estira para igualar */
+}
+
+.team-boxed .item {
+  text-align:center}
+
+.team-boxed .item .box {
+  text-align:center;
+  padding:30px;
+  background-color:#2a2a2a; /* gris opaco */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35); /* sombra suave opcional */
+  margin-bottom:30px}
+
+.team-boxed .item .name {
+  font-weight:bold;
+  margin-top:28px;
+  margin-bottom:8px;
+  color:#f2f2f2}
+
+.team-boxed .item .title {
+  text-transform:uppercase;
+  font-weight:bold;
+ color:#a9a9a9;
+  letter-spacing:2px;
+  font-size: 0.8125rem}
+
+.team-boxed .item .description {
+  font-size: 0.9375rem;
+  margin-top:15px;
+  margin-bottom:20px;
+  color:#c7c7c7}
+
+.team-boxed .item img {
+  max-width:160px}
+
+.team-boxed .social {
+  font-size:18px;
+  color:#a2a8ae}
+
+.team-boxed .social a {
+  color:inherit;
+  margin:0 10px;
+  display:inline-block;
+  opacity:0.7}
+
+.team-boxed .social a:hover {
+  opacity:1}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden}
+
+@media (max-width: 767px){
+.character-section {padding: 50px 0}
+.character-section {margin-top: 50px}
+}
+
+.character-section {
+  padding: 30px 0 70px 0; /* menos arriba, más abajo */
+  margin-top: 20px;       /* reduce el espacio con el banner */
+}
+
+.flip-card {
+  width: 100%;
+  height: 400px; /* o el alto que tenías antes, 380–420px */
+  perspective: 1000px;
+  margin-bottom: 20px;
+  -webkit-perspective: 1000px;
+}
+
+.flip-card-inner,
+.flip-card-front,
+.flip-card-back {
+  height: 100%;
+}
+
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  display: block;
+  transform-origin: center center}
+
+.flip-card-front {
+  z-index: 1; /* por defecto atrás */
+  transform: rotateY(0deg) translateZ(0);
+  background-color: #2c2c2c;
+  position: absolute}
+
+.flip-card-front img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transform: translateZ(-1px);
+  transition: filter 0.45s ease, transform 0.45s ease}
+
+/* Pseudo-capa sobre la imagen para oscurecer al girar */
+.flip-card-front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  pointer-events: none;
+  transition: background 0.45s ease;
+  z-index: 2}
+
+/* Al girar: oscurecer progresivamente la imagen */
+.flip-card:hover .flip-card-front img,
+.flip-card:focus-within .flip-card-front img {
+  filter: brightness(40%) saturate(.9);
+  transform: scale(1.02)}
+.flip-card:hover .flip-card-front::after,
+.flip-card:focus-within .flip-card-front::after {
+  background: rgba(0,0,0,0.45)}
+
+.flip-card-back {
+  z-index: 3;
+  transform: rotateY(180deg) translateZ(0);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  text-align: center;
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(.2,.9,.3,1);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  overflow: hidden}
+
+.flip-card-back::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  filter: brightness(60%);
+  transform: scaleX(-1);
+  z-index: 1;
+  transition: opacity 0.6s ease, filter 0.6s ease}
+
+.flip-card-back::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2}
+
+.flip-card-back h3,
+.flip-card-back p {
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  color: #fff}
+
+.flip-card-back h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 8px}
+.flip-card-back p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  opacity: 0.95}
+
+.flip-card:not(:hover){
+  content: "";
+}
+
+
+/* === IMÁGENES DEL REVERSO DE LAS CARTAS SEGÚN VIEWPORT === */
+
+/* === ALTA RESOLUCIÓN (1200px o más) === */
+@media (min-width: 1200px) {
+  #personajes .col-6:nth-of-type(1) .flip-card-back::before {
+    background-image: url("assets/img/character_merlina.jpg")}
+  #personajes .col-6:nth-of-type(2) .flip-card-back::before {
+    background-image: url("assets/img/character_enid.jpg")}
+  #personajes .col-6:nth-of-type(3) .flip-card-back::before {
+    background-image: url("assets/img/character_morticia.jpg")}
+  #personajes .col-6:nth-of-type(4) .flip-card-back::before {
+    background-image: url("assets/img/character_thing.jpg")}
+  #personajes .col-6:nth-of-type(5) .flip-card-back::before {
+    background-image: url("assets/img/character_agnes.jpg")}
+  #personajes .col-6:nth-of-type(6) .flip-card-back::before {
+    background-image: url("assets/img/character_tyler.jpg")}
+    }
+
+
+/* === MEDIA RESOLUCIÓN (entre 768px y 1199px) === */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  #personajes .col-6:nth-of-type(1) .flip-card-back::before {
+    background-image: url("assets/img/character_merlina-media.jpg")}
+  #personajes .col-6:nth-of-type(2) .flip-card-back::before {
+    background-image: url("assets/img/character_enid-media.jpg")}
+  #personajes .col-6:nth-of-type(3) .flip-card-back::before {
+    background-image: url("assets/img/character_morticia-media.jpg")}
+  #personajes .col-6:nth-of-type(4) .flip-card-back::before {
+    background-image: url("assets/img/character_thing-media.jpg")}
+  #personajes .col-6:nth-of-type(5) .flip-card-back::before {
+    background-image: url("assets/img/character_agnes-media.jpg")}
+  #personajes .col-6:nth-of-type(6) .flip-card-back::before {
+    background-image: url("assets/img/character_tyler-media.jpg")}
+}
+
+/* === BAJA RESOLUCIÓN (menor a 768px) === */
+@media (max-width: 767.98px) {
+  #personajes .col-6:nth-of-type(1) .flip-card-back::before {
+    background-image: url("assets/img/character_merlina-baja.jpg")}
+  #personajes .col-6:nth-of-type(2) .flip-card-back::before {
+    background-image: url("assets/img/character_enid-baja.jpg")}
+  #personajes .col-6:nth-of-type(3) .flip-card-back::before {
+    background-image: url("assets/img/character_morticia-baja.jpg")}
+  #personajes .col-6:nth-of-type(4) .flip-card-back::before {
+    background-image: url("assets/img/character_thing-baja.jpg")}
+  #personajes .col-6:nth-of-type(5) .flip-card-back::before {
+    background-image: url("assets/img/character_agnes-baja.jpg")}
+  #personajes .col-6:nth-of-type(6) .flip-card-back::before {
+    background-image: url("assets/img/character_tyler-baja.jpg")}
+}
+
+@media (max-width: 767px) {
+  .flip-card { height: 250px}
+  .flip-card-back h3 { font-size: 1.2rem}
+  .flip-card-back p { font-size: 0.9rem}
+}
+
+/* árboles laterales */
+.trailer-section {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: transparent}
+
+/* contenedor de los árboles */
+.trailer-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none}
+
+.arbol-bg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: auto;
+  opacity: 0.35;
+  object-fit: contain;
+  filter: brightness(70%);
+  user-select: none;
+  pointer-events: none}
+
+.arbol-izquierda {
+  left: 0}
+
+.arbol-derecha {
+  right: 0}
+
+.trailer-section .container {
+  position: relative;
+  z-index: 3}
+
+@media (max-width: 767px) {
+  .arbol-bg {
+    opacity: 0.2}
+}
+
+.cementery-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  margin-top: -300px;
+  z-index: 1}
+
+.cementery-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.9;
+  pointer-events: none;
+  user-select: none}
+
+#contacto {
+  position: relative;
+  z-index: 3;
+  background: transparent}
+
+footer {
+  position: relative;
+  z-index: 2}
+
+#personajes h1,
+#nota h1,
+#trailer .section-title,
+#contacto .section-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-transform: uppercase}
+
+/* efecto de que aparece */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s cubic-bezier(0.22, 0.68, 0.3, 1)}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0)}
+
+.reveal-delay-1 {
+  transition-delay: 0.2s}
+.reveal-delay-2 {
+  transition-delay: 0.4s}
+.reveal-delay-3 {
+  transition-delay: 0.6s}
+.reveal-delay-4 {
+  transition-delay: 0.8s}
+.reveal-delay-5 {
+  transition-delay: 1s}
+
+@media (max-width: 767px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    zoom: 1 !important}
+
+  body {
+    padding-top: 56px}
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover}
+
+  .carousel-caption h5 {
+    font-size: 1.3rem}
+
+  .carousel-caption p {
+    font-size: 0.9rem}
+
+  .flip-card {
+    height: 220px;
+    overflow: hidden}
+  .flip-card-back h3 {
+    font-size: 1rem}
+  .flip-card-back p {
+    font-size: 0.85rem}
+
+  .cementery-wrap {
+    margin-top: 0;
+    overflow: hidden}
+
+  section {
+    padding-left: 12px;
+    padding-right: 12px}
+
+  .arbol-bg {
+    opacity: 0.15}
+
+  form .form-control {
+    font-size: 0.95rem}
+}
+
+/* NOTA PRINCIPAL LAS IMÁGENES */
+@media (max-width: 767px) {
+  #nota img {
+    float: none !important;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    max-width: 100%;
+    height: auto}
+
+  #nota .clearfix {
+    display: flex;
+    flex-direction: column;
+    align-items: center}
+
+  #nota p {
+    text-align: left;
+    width: 100%;
+    padding: 0 10px}
+}
+
+/* FOOTER APILADO Y CENTRADO EN CELULARES */
+@media (max-width: 767px) {
+  footer .row {
+    flex-direction: column;
+    text-align: center}
+
+  footer .col-md-6 {
+    width: 100%;
+    text-align: center !important;
+    margin-bottom: 10px}
+
+  footer p {
+    margin-bottom: 12px;
+    font-size: 0.9rem}
+
+}
+
+/* RESEÑAS HORIZONTAL DESLIZABLE */
+@media (max-width: 768px) {
+  #reseñas .people {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important; /* 🔹 bloquea scroll vertical interno */
+    touch-action: pan-x !important; /* 🔹 permite solo desplazamiento horizontal táctil */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0}
+
+  #reseñas .people > .item,
+  #reseñas .people > .item[class*="col-"] {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    scroll-snap-align: center;
+    display: block !important}
+
+  /* si por alguna razón quedan columnas internas, anular su width */
+  #reseñas .people [class*="col-"] {
+    max-width: none !important;
+    width: auto !important;
+    flex: 0 0 auto !important}
+
+  #reseñas .people .item .box {
+    width: 100%;
+    margin: 0 auto;
+    padding: 18px}
+
+  #reseñas .people .item img {
+    max-width: 110px;
+    height: auto;
+    display: block;
+    margin: 0 auto}
+
+  #reseñas .people .item .name {
+    font-size: 1rem}
+
+  #reseñas .people .item .description {
+    font-size: 0.88rem;
+    line-height: 1.4}
+
+  #reseñas {
+    overflow: hidden}
+
+  #reseñas .people {
+    scroll-behavior: smooth}
+}
+
+#reseñas .people .item .box {
+  align-items: center;
+  text-align: center}
+
+#reseñas .people .item img {
+  display: block;
+  margin: 0 auto 15px auto}
+
+footer a {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important}
+
+footer a:focus,
+footer a:focus-visible,
+footer a:active,
+footer a:hover {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important}
+
+/* PERSONAJES — SCROLL HORIZONTAL EN MÓVILES (con margen inicial y final) */
+@media (max-width: 767px) {
+  #personajes .container {
+    padding: 0}
+
+  #personajes .row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important; /* 🔹 bloquea scroll vertical interno */
+    touch-action: pan-x !important; /* 🔹 permite solo desplazamiento horizontal táctil */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 1.5rem; /* margen inicial y final del scroll */
+    scroll-padding-left: 1.5rem; /* asegura que la primera card no pegue al borde */
+  }
+
+  #personajes .row > .col-6 {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    scroll-snap-align: center}
+
+  /* margen derecho extra en la última card para que no se corte abruptamente */
+  #personajes .row > .col-6:last-child {
+    margin-right: 1.5rem}
+
+  #personajes .flip-card {
+    margin: 0 auto}
+
+  #personajes {
+    overflow: hidden}
+}
+
+/* === EFECTO LEER MÁS (sin JS) — DESVANECIMIENTO DESDE EL 2º PÁRRAFO === */
+@media (max-width: 767px) {
+
+  .leer-mas-toggle {
+    display: none}
+
+  .nota-texto {
+    max-height: 170px; /* altura aproximada de un solo párrafo */
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+    transition: max-height 0.6s ease, mask-image 0.6s ease}
+
+  /* Al expandirse */
+  .leer-mas-toggle:checked ~ .nota-texto {
+    max-height: 2000px;
+    mask-image: none;
+    -webkit-mask-image: none}
+
+  /* Botón */
+  .leer-mas-btn {
+    display: block;
+    margin: 16px auto 10px auto;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 6px 18px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content}
+
+  .leer-mas-btn:hover {
+    background: #7a4fa3;
+    border-color: #7a4fa3}
+
+  /* Cambiar texto del botón según estado */
+  .leer-mas-toggle:not(:checked) ~ .leer-mas-btn::after {
+    content: " ↓"}
+
+  .leer-mas-toggle:checked ~ .leer-mas-btn::after {
+    content: " ↑"}
+
+  .leer-mas-toggle:checked ~ .leer-mas-btn {
+    content: "Leer menos"}
+}
+
+/* En pantallas medianas y grandes */
+@media (min-width: 767px) {
+  .nota-texto {
+    max-height: none !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important}
+
+   .leer-mas-btn,
+  .leer-mas-toggle {
+    display: none !important}
+}
+
+/* === LAYOUT DE NOTAS EN PANTALLAS GRANDES Y MEDIANAS === */
+@media (min-width: 767px) {
+
+  /* Contenedor base de cada nota */
+  #nota .clearfix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem}
+
+  /* Imagen y texto mitad y mitad */
+  #nota picture {
+    flex: 1 1 50%;
+    max-width: 50%}
+
+  #nota .nota-texto {
+    flex: 1 1 50%;
+    max-width: 50%}
+
+  #nota picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover}
+
+  #nota .nota-texto p {
+    text-align: justify;
+    color: #e6e6e6;
+    margin-bottom: 1rem}
+
+  /* --- PRIMERA NOTA --- (imagen izquierda, texto derecha) */
+  #nota:nth-of-type(1) .clearfix {
+    flex-direction: row}
+
+  /* --- SEGUNDA NOTA --- (imagen derecha, texto + título izquierda) */
+  #nota:nth-of-type(2) .clearfix {
+    flex-direction: row-reverse;
+    position: relative}
+
+  #nota:nth-of-type(2) h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #fff}
+
+  /* Reordenar el subtítulo de la segunda nota: arriba del texto */
+  #nota:nth-of-type(2) h2 {
+    order: -1}
+
+  /* Ocultar el botón de leer más y checkbox en escritorio */
+  #nota .leer-mas-btn,
+  #nota .leer-mas-toggle {
+    display: none !important}
+
+  /* Asegurar texto completo visible */
+  #nota .nota-texto {
+    max-height: none !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important}
+
+  #nota .nota-dos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-direction: row-reverse}
+
+/* === LAYOUT "TIPO DIARIO" PARA NOTAS EN PANTALLAS MEDIANAS (CORREGIDO) === */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+  /* desactivar flexbox que estaba forzando dos columnas */
+  #nota .clearfix,
+  #nota .nota-dos {
+    display: block !important}
+
+  /* Quitar cualquier flex-basis/max-width que impedía el float */
+  #nota picture,
+  #nota .nota-texto {
+    max-width: none !important;
+    flex: none !important}
+
+  /* === PRIMERA NOTA: imagen a la izquierda, texto la rodea ===
+     Seleccionamos el .clearfix que NO tiene la clase .nota-dos */
+  #nota .clearfix:not(.nota-dos) picture {
+    float: left;
+    width: 48%;
+    margin: 0 2rem 1.5rem 0;
+    display: block}
+
+  /* === SEGUNDA NOTA: imagen a la derecha, texto la rodea === */
+  #nota .nota-dos picture {
+    float: right;
+    width: 48%;
+    margin: 0 0 1.5rem 2rem;
+    display: block}
+
+  /* asegurar que la imagen dentro del <picture> ocupe su contenedor */
+  #nota picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px}
+
+  /* Texto que fluye; cuando no cabe al lado baja y ocupa todo el ancho */
+  #nota .nota-texto {
+    overflow: visible !important}
+
+  /* Forzar que el contenido que sigue quede debajo cuando corresponda */
+  #nota .nota-texto::after {
+    content: "";
+    display: block;
+    clear: both}
+
+  #nota .nota-texto h2,
+  #nota .nota-texto p {
+    text-align: justify;
+    color: #e6e6e6;
+    margin-bottom: 1rem}
+}
+}
+
+footer a img {
+  filter: grayscale(100%) brightness(80%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
+  display: inline-block;
+  vertical-align: middle;
+  border: none !important;
+}
+
+footer a:hover img {
+  filter: grayscale(0%) brightness(100%);
+  transform: scale(1.1);
+}
+
+/* === Ajuste de altura del carousel en pantallas medianas === */
+/* Aumenta la altura visible del banner entre 768 px y 1199 px */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .carousel-item img {
+    height: 40vh !important;              /* altura mayor (antes probablemente 45–50vh) */
+    object-fit: cover !important;          /* recorta bordes laterales sin deformar */
+    object-position: center center !important; /* mantiene el foco centrado */
+  }
+}
+

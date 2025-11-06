@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tomas Caruso - Maquetado y Desarrollo Web - DMM2AP - 2025</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class=" text-bg-dark">
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#inicio">
+        <img src="assets/logos/logo.png" alt="Logo Merlina" width="40" height="40" class="me-2">
+        <span>Merlina Fan Page</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#personajes">Personajes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nota">Nota</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#trailer">Tráiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reseñas">Reseñas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section id="inicio" class="carousel-section" aria-label="Slider principal - imágenes panorámicas de Merlina">
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <picture>
+      <source srcset="assets/img/slide-1-1920-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+      <source srcset="assets/img/slide-1-1920.jpg" media="(min-width: 1200px)">
+      <img src="assets/img/slide-1-1920.jpg" class="d-block w-100" alt="Dedos se roba el show">
+    </picture>
+        <div class="carousel-caption d-block">
+          <h5>Dedos se roba el show</h5>
+          <p>Descubre la historia detras de Dedos y sus inicios con la familia</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+       <picture>
+      <source srcset="assets/img/slide-2-1920-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+      <source srcset="assets/img/slide-2-1920.jpg" media="(min-width: 1200px)">
+      <img src="assets/img/slide-2-1920.jpg" class="d-block w-100" alt="Una amistad muy polarizada">
+    </picture>
+        <div class="carousel-caption d-block">
+          <h5>Una amistad muy polarizada</h5>
+          <p>Merlina y Enid como agua y aceite, asombrosamente funcionan</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <picture>
+      <source srcset="assets/img/slide-3-1920-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+      <source srcset="assets/img/slide-3-1920.jpg" media="(min-width: 1200px)">
+      <img src="assets/img/slide-3-1920.jpg" class="d-block w-100" alt="Fría como hielo, letal como Piraña">
+    </picture>
+        <div class="carousel-caption d-block">
+          <h5>Fría como hielo, letal como Piraña</h5>
+          <p>Todo el fandom quedó atónito con la escena de apertura</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+<section id="personajes" class="character-section">
+  <h1 class="text-center reveal">Personajes</h1>
+        <div class="container">
+            <div class="row">
+                <!-- Carta 1 -->
+                <div class="col-6 col-md-6 col-lg-4 reveal">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                 <picture>
+                                  <source srcset="assets/img/character_merlina-baja.jpg" media="(max-width: 767.98px)">
+                                  <source srcset="assets/img/character_merlina-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+                                  <source srcset="assets/img/character_merlina.jpg" media="(min-width: 1200px)">
+                                 <img src="assets/img/character_merlina.jpg" alt="Merlina">
+                                  </picture>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Merlina Addams</h3>
+                                <p>Hija de Morticia y Gómez, estudiante de Nevermore. Inteligente, sarcástica y con una mente brillante para resolver misterios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carta 2 -->
+                <div class="col-6 col-md-6 col-lg-4 reveal reveal-delay-1">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                 <picture>
+                                  <source srcset="assets/img/character_enid-baja.jpg" media="(max-width: 767.98px)">
+                                  <source srcset="assets/img/character_enid-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+                                  <source srcset="assets/img/character_enid.jpg" media="(min-width: 1200px)">
+                                 <img src="assets/img/character_enid.jpg" alt="Enid">
+                                  </picture>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Enid Sinclair</h3>
+                                <p>Compañera de cuarto de Merlina en Nevermore. Alegre, optimista y el contrapunto luminoso del mundo gótico que la rodea.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carta 3 -->
+                <div class="col-6 col-md-6 col-lg-4 reveal reveal-delay-2">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                 <picture>
+                                  <source srcset="assets/img/character_morticia-baja.jpg" media="(max-width: 767.98px)">
+                                  <source srcset="assets/img/character_morticia-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+                                  <source srcset="assets/img/character_morticia.jpg" media="(min-width: 1200px)">
+                                 <img src="assets/img/character_morticia.jpg" alt="Morticia">
+                                  </picture>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Morticia Addams</h3>
+                                <p>Madre de Merlina y matriarca de la familia Addams. Elegante, serena y con una fascinación natural por lo oscuro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carta 4 -->
+                <div class="col-6 col-md-6 col-lg-4 reveal reveal-delay-1">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                 <picture>
+                                  <source srcset="assets/img/character_thing-baja.jpg" media="(max-width: 767.98px)">
+                                  <source srcset="assets/img/character_thing-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+                                  <source srcset="assets/img/character_thing.jpg" media="(min-width: 1200px)">
+                                 <img src="assets/img/character_thing.jpg" alt="Thing">
+                                  </picture>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Dedos</h3>
+                                <p>Sirviente y amigo leal de los Addams. Ingenioso, expresivo y siempre dispuesto a ayudar con una mano.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carta 5 -->
+                <div class="col-6 col-md-6 col-lg-4 reveal reveal-delay-2">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                 <picture>
+                                  <source srcset="assets/img/character_agnes-baja.jpg" media="(max-width: 767.98px)">
+                                  <source srcset="assets/img/character_agnes-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+                                  <source srcset="assets/img/character_agnes.jpg" media="(min-width: 1200px)">
+                                 <img src="assets/img/character_agnes.jpg" alt="Agnes">
+                                  </picture>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Agnes Thornfield</h3>
+                                <p>Estudiante y amiga de Merlina. Puede volverse invisible. Tímida, curiosa y usa su habilidad para espiar o escapar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carta 6 -->
+                <div class="col-6 col-md-6 col-lg-4 reveal reveal-delay-3">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                 <picture>
+                                  <source srcset="assets/img/character_tyler-baja.jpg" media="(max-width: 767.98px)">
+                                  <source srcset="assets/img/character_tyler-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+                                  <source srcset="assets/img/character_tyler.jpg" media="(min-width: 1200px)">
+                                 <img src="assets/img/character_tyler.jpg" alt="Tyler">
+                                  </picture>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Tyler Galpin</h3>
+                                <p>Hijo del sheriff de Jericho y amigo de Merlina. Carismático, enigmático y con un pasado que esconde secretos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section id="nota" class="container">
+  <div class="text-center p-3">
+    <h1 class="text-center reveal">Merlina Temporada 2</h1>
+    <p class="text-center reveal reveal-delay-1">
+      <span class="by">by</span> Tomi Caruso
+      <span class="date">26 OCT 2025</span>
+    </p>
+  </div>
+
+  <div class="clearfix reveal reveal-delay-2">
+    <picture>
+    <source srcset="assets/img/article_img1-baja.jpg" media="(max-width: 767.98px)">
+    <source srcset="assets/img/article_img1-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+    <source srcset="assets/img/article_img1.jpg" media="(min-width: 1200px)">
+    <img src="assets/img/article_img1.jpg" alt="Nota 1">
+    </picture>
+    <input type="checkbox" id="toggle-nota1" class="leer-mas-toggle">
+
+    <div class="nota-texto">
+      <p><strong>Tras los sucesos de la primera temporada</strong>, Merlina regresa a la Academia Nevermore decidida a concentrarse en sus estudios y evitar nuevos dramas. Sin embargo, pronto descubre que el ambiente en la escuela ha cambiado: un nuevo director impone reglas rígidas y hay una sensación constante de que algo oscuro se esconde entre los pasillos.</p>
+
+      <p>A medida que investiga, la joven descubre rastros de una antigua sociedad secreta ligada al pasado de Nevermore y a su propia familia. Sus intentos por desenmascarar la verdad la enfrentan con sus compañeros y con sus propios límites. La <em>desconfianza crece</em>, los lazos se tensan, y el humor ácido que la caracteriza se convierte en su mejor defensa frente a lo desconocido.</p>
+
+      <p>La temporada explora un costado más íntimo de Merlina, mostrando las grietas detrás de su aparente <em>frialdad</em>. Enid, siempre optimista, sigue siendo su contrapunto y su cable a tierra, mientras nuevos personajes irrumpen con <strong>intenciones ambiguas</strong>. Entre rituales, secretos y visiones del pasado, Merlina se ve forzada a preguntarse qué tanto de su destino está bajo su control.</p>
+    </div>
+
+    <label for="toggle-nota1" class="leer-mas-btn">Leer más ↓</label>
+  </div>
+</section>
+
+
+<section id="nota" class="container">
+  <div class="text-center p-3"></div>
+
+  <div class="clearfix reveal nota-dos">
+    <picture>
+      <source srcset="assets/img/article_img2-baja.jpg" media="(max-width: 767.98px)">
+      <source srcset="assets/img/article_img2-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
+      <source srcset="assets/img/article_img2.jpg" media="(min-width: 1200px)">
+      <img src="assets/img/article_img2.jpg" alt="Nota 2">
+    </picture>
+
+    <input type="checkbox" id="toggle-nota2" class="leer-mas-toggle">
+
+    <div class="nota-texto">
+      <h2><strong>Sombras del linaje</strong></h2>
+
+      <p>Cuando una serie de fenómenos sobrenaturales sacude <em>Nevermore</em>, Merlina descubre que la amenaza que los acecha está ligada a una maldición que pesa sobre su familia. Su búsqueda de respuestas la conduce a un territorio peligroso, donde la línea entre la lógica y la locura se vuelve difusa.</p>
+                    
+      <p>Mientras intenta mantener su independencia, Merlina comienza a comprender que no todo puede resolverse con <em>inteligencia o sarcasmo</em>. Los vínculos que ha formado se vuelven su mayor fortaleza, aunque también su mayor vulnerabilidad. Enfrentarse a la oscuridad implica reconocer que no todo <strong>monstruo</strong> es externo: algunos habitan dentro de uno mismo.</p>
+                    
+      <p>El final de temporada deja un sabor agridulce: algunos misterios se resuelven, otros apenas comienzan. Pero lo que queda claro es que <strong>Merlina ha cambiado</strong>. Sigue siendo la mente brillante y sarcástica que todos temen y admiran, aunque ahora carga con un conocimiento más profundo y <em>más peligroso</em> sobre quién es realmente.</p>
+    </div>
+
+    <label for="toggle-nota2" class="leer-mas-btn">Leer más ↓</label>
+  </div>
+</section>
+
+  <section id="trailer" class="py-5 trailer-section" aria-labelledby="trailer-title">
+  <div class="trailer-bg">
+
+    <picture>
+      <source srcset="assets/img/arbolesizquierda-baja.png" media="(max-width: 767.98px)">
+      <source srcset="assets/img/arbolesizquierda-media.png" media="(min-width: 768px) and (max-width: 1199.98px)">
+      <source srcset="assets/img/arbolesizquierda.png" media="(min-width: 1200px)">
+     <img src="assets/img/arbolesizquierda.png" alt="Árboles izquierda" class="arbol-bg arbol-izquierda">
+    </picture>
+
+    <picture>
+      <source srcset="assets/img/arbolesderecha-baja.png" media="(max-width: 767.98px)">
+      <source srcset="assets/img/arbolesderecha-media.png" media="(min-width: 768px) and (max-width: 1199.98px)">
+      <source srcset="assets/img/arbolesderecha.png" media="(min-width: 1200px)">
+     <img src="assets/img/arbolesderecha.png" alt="Árboles derecha" class="arbol-bg arbol-derecha">
+    </picture>
+
+  </div>
+
+  <div class="container position-relative">
+    <h2 id="trailer-title" class="section-title text-center mb-4 reveal">Nueva temporada</h2>
+    <p class="text-center mb-3 reveal reveal-delay-1">Mira el tráiler oficial</p>
+
+    <div class="ratio ratio-16x9 mx-auto reveal reveal-delay-1" style="max-width: 1000px;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-05Jdrrb9MQ?si=8jL6RR_ZsmGCYH72"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+ <div id="reseñas" class="team-boxed">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center reveal">Reseñas</h2>
+                <p class="text-center reveal reveal-delay-1">Sin spoilers sobre la temporada 2 de Merlina</p>
+            </div>
+            <div class="row people">
+                <div class="col-md-4 col-lg-4 item reveal">
+                    <div class="box">
+                      <picture>
+                        <source srcset="assets/img/teen3-media-baja.png" media="(max-width: 767.98px)">
+                        <source srcset="assets/img/teen3-media-baja.png" media="(min-width: 768px) and (max-width: 1199.98px)">
+                        <source srcset="assets/img/teen3.png" media="(min-width: 1200px)">
+                      <img class="rounded-circle" src="assets/img/teen3.png">
+                      </picture>
+                        <h3 class="name">Gomez Milagros</h3>
+                        <p class="title">Fan Oficial</p>
+                        <p class="description">Una segunda temporada que mantiene el tono gótico y detective de la primera, pero acelera el ritmo con nuevos misterios y giros que profundizan tanto en los personajes como en sus conflictos sobrenaturales, entre otros mas.</p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 item reveal reveal-delay-1">
+                    <div class="box">
+                      <picture>
+                        <source srcset="assets/img/teen1-media-baja.png" media="(max-width: 767.98px)">
+                        <source srcset="assets/img/teen1-media-baja.png" media="(min-width: 768px) and (max-width: 1199.98px)">
+                        <source srcset="assets/img/teen1.png" media="(min-width: 1200px)">
+                      <img class="rounded-circle" src="assets/img/teen1.png">
+                      </picture>
+                        <h3 class="name">Zaballeta Magalí</h3>
+                        <p class="title">Newbie</p>
+                        <p class="description">Si bien algunos elementos pueden sentirse familiares, la temporada se atreve a ampliar el universo y plantea preguntas más complejas, dejando parada una nueva dirección que promete mayor riesgo en futuras entregas.</p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 item reveal reveal-delay-2">
+                    <div class="box">
+                      <picture>
+                        <source srcset="assets/img/teen2-media-baja.png" media="(max-width: 767.98px)">
+                        <source srcset="assets/img/teen2-media-baja.png" media="(min-width: 768px) and (max-width: 1199.98px)">
+                        <source srcset="assets/img/teen2.png" media="(min-width: 1200px)">
+                      <img class="rounded-circle" src="assets/img/teen2.png">
+                      </picture>
+                        <h3 class="name">Corrales Joaquín</h3>
+                        <p class="title">Fan Leal</p>
+                        <p class="description">El elenco continúa brillando, con una protagonista cuya evolución personal se refleja en una trama que mezcla amenazas externas e internas; la atmósfera oscura-humorada sigue siendo un gran atractivo. </p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <section id="contacto" class="py-5" aria-labelledby="contacto-title">
+    <div class="container">
+      <h2 id="contacto-title" class="section-title text-center mb-4 reveal">Contacto</h2>
+
+      <div class="row justify-content-center reveal reveal-delay-1">
+        <div class="col-12 col-md-8">
+          <form action="mailto:reemplazar@dominio.com" method="post" enctype="text/plain" class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required maxlength="60" aria-required="true">
+                <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" id="apellido" name="apellido" class="form-control" required maxlength="60" aria-required="true">
+                <div class="invalid-feedback">Por favor ingresa tu apellido.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required maxlength="120" aria-required="true">
+                <div class="invalid-feedback">Ingrese un correo válido.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="comentario" class="form-label">Comentario</label>
+                <textarea id="comentario" name="comentario" class="form-control" rows="6" required maxlength="1000" aria-required="true"></textarea>
+                <div class="invalid-feedback">Escribe tu mensaje.</div>
+              </div>
+
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-outline-light">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="cementery-wrap" aria-hidden="true">
+    <picture>
+      <source srcset="assets/img/cementery-media-baja.png" media="(max-width: 767.98px)">
+      <source srcset="assets/img/cementery-media-baja.png" media="(min-width: 768px) and (max-width: 1199.98px)">
+      <source srcset="assets/img/cementery.png" media="(min-width: 1200px)">
+     <img src="assets/img/cementery.png" alt="Cementerio decorativo" class="cementery-img">
+    </picture>
+  </div>
+  <footer class="bg-black text-light py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <p class="mb-0">Tomas Caruso — Maquetado y Desarrollo Web — DMM2AP — 2025</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="https://www.instagram.com/" class="me-2" aria-label="Instagram" target="_blank" rel="noopener">
+            <img src="assets/img/instragam_logo.png" alt="Instagram" width="36" height="36">
+          </a>
+          <a href="https://www.facebook.com/" class="me-2" aria-label="Facebook" target="_blank" rel="noopener">
+            <img src="assets/img/facebook_logo.png" alt="Facebook" width="36" height="36">
+          </a>
+          <a href="https://www.netflix.com/" aria-label="Netflix" target="_blank" rel="noopener">
+            <img src="assets/img/netflix_logo_N.png" alt="Netflix" width="36" height="36">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <script>
+  const carousel = document.querySelector('#carouselExampleCaptions');
+  if (carousel) {
+    new bootstrap.Carousel(carousel, {
+      interval: 6000, // 6 segundos
+      ride: 'carousel',
+      pause: false
+    });
+  }
+</script>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    reveals.forEach(el => {
+      const boxTop = el.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+<script>
+// Validación Bootstrap + alerta personalizada // 
+(() => {
+  'use strict';
+
+  const forms = document.querySelectorAll('.needs-validation');
+
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      event.preventDefault(); // Siempre prevenir el envío por defecto
+      event.stopPropagation();
+
+      if (!form.checkValidity()) {
+        // Si hay errores, mostrar los estilos de error
+        form.classList.add('was-validated');
+      } else {
+        // Si el formulario es válido:
+        form.classList.remove('was-validated'); // Limpia los estilos rojos
+
+        // Mostrar alerta Bootstrap bonita
+        const alertBox = document.createElement('div');
+        alertBox.className = 'alert alert-success alert-dismissible fade show mt-3 text-center';
+        alertBox.role = 'alert';
+        alertBox.innerHTML = `
+          <strong>Merlina Fan-Page Team dice:</strong> Formulario enviado correctamente ✅
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        `;
+
+        // Insertar la alerta justo debajo del formulario
+        form.parentNode.insertBefore(alertBox, form.nextSibling);
+
+        // Resetear los campos
+        form.reset();
+
+        // Quitar cualquier mensaje de error residual
+        setTimeout(() => {
+          form.querySelectorAll('.is-invalid, .is-valid').forEach(el => {
+            el.classList.remove('is-invalid', 'is-valid');
+          });
+        }, 100);
+      }
+    }, false);
+  });
+})();
+</script>
+ </body>
