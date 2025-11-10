@@ -1,520 +1,561 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tomas Caruso - Maquetado y Desarrollo Web - DMM2AP - 2025</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dante Cammareri-Maquetado y Desarrollo Web-DMMA2P-2025</title>
+    <link rel="shortcut icon" href="imagenes/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilo-carpeta/style.css">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
 </head>
-<body class=" text-bg-dark">
+<body>
 
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#inicio">
-        <img src="assets/logos/logo.png" alt="Logo Merlina" width="40" height="40" class="me-2">
-        <span>Merlina Fan Page</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#personajes">Personajes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#nota">Nota</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#trailer">Tráiler</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#reseñas">Reseñas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
+<header id="inicio" class="mb-3 border-bottom border-1 p-1 p-lg-3"> 
+
+<nav class="navbar navbar-expand-md bg-transparent" data-bs-theme="dark">
+        <div class="container-fluid justify-content-between">
+            <h1 class="navbar-brand">
+              <a href="index.html"><img src="./imagenes/logo.png" alt="conect" class="d-block d-sm-none"></a>      
+              <a href="index.html"><img src="./imagenes/logo-s.png" alt="conect" class="d-none d-sm-block d-lg-none"></a>      
+              <a href="index.html"><img src="./imagenes/logo-md.png" alt="conect" class="d-none d-lg-block"></a>               
+            </h1>
+            <button class="navbar-toggler d-md-none" type="button" 
+                    data-bs-toggle="offcanvas" data-bs-target="#nav-desplegable">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-none d-md-block">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li><a class="nav-link border-end border-2 p-1 pe-3" href="#hero">Inicio</a></li>
+                    <li><a class="nav-link border-end border-2 p-1 pe-3" href="#sec-1">Bajo la nieve</a></li>
+                   <li><a class="nav-link border-end border-2 p-1 pe-3" href="#sec-2">Personajes</a></li>
+                   <li><a class="nav-link border-end border-2 p-1 pe-3" href="#sec-3">Producción</a></li>
+                   <li><a class="nav-link p-1 pe-3" href="#sec-4">Comentar</a></li>               
+                </ul>
+            </div>
+            <div class="offcanvas offcanvas-end d-md-none w-50 border-0 fs-4" id="nav-desplegable">
+                <div class="offcanvas-header pt-3">
+                    <p class="offcanvas-title h2 border-bottom w-100">Menú</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                    <li><a class="nav-link" href="#hero">Inicio</a></li>
+                    <li><a class="nav-link" href="#sec-1">Bajo la nieve</a></li>
+                   <li><a class="nav-link" href="#sec-2">Personajes</a></li>
+                   <li><a class="nav-link" href="#sec-3">Producción</a></li>
+                   <li><a class="nav-link" href="#sec-4">Comentar</a></li> 
+                    </ul>
+                </div>
+            </div>   
+        </div>
+</nav>
 </header>
 
-<section id="inicio" class="carousel-section" aria-label="Slider principal - imágenes panorámicas de Merlina">
-  <div id="carouselExampleCaptions" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <picture>
-      <source srcset="assets/img/slide-1-1920-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-      <source srcset="assets/img/slide-1-1920.jpg" media="(min-width: 1200px)">
-      <img src="assets/img/slide-1-1920.jpg" class="d-block w-100" alt="Dedos se roba el show">
-    </picture>
-        <div class="carousel-caption d-block">
-          <h5>Dedos se roba el show</h5>
-          <p>Descubre la historia detras de Dedos y sus inicios con la familia</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-       <picture>
-      <source srcset="assets/img/slide-2-1920-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-      <source srcset="assets/img/slide-2-1920.jpg" media="(min-width: 1200px)">
-      <img src="assets/img/slide-2-1920.jpg" class="d-block w-100" alt="Una amistad muy polarizada">
-    </picture>
-        <div class="carousel-caption d-block">
-          <h5>Una amistad muy polarizada</h5>
-          <p>Merlina y Enid como agua y aceite, asombrosamente funcionan</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <picture>
-      <source srcset="assets/img/slide-3-1920-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-      <source srcset="assets/img/slide-3-1920.jpg" media="(min-width: 1200px)">
-      <img src="assets/img/slide-3-1920.jpg" class="d-block w-100" alt="Fría como hielo, letal como Piraña">
-    </picture>
-        <div class="carousel-caption d-block">
-          <h5>Fría como hielo, letal como Piraña</h5>
-          <p>Todo el fandom quedó atónito con la escena de apertura</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+<section  id="hero" class="container-lg mb-2 mb-sm-4 p-lg-4">
+          <section class="text-center d-lg-none">
+                 <div class="d-inline-flex flex-column align-items-end mb-2 mb-sm-4">
+                      <h1 id="titulo" class="fw-medium mb-0 lh-1">EL ETERNAUTA</h1>
+                      <p id="sub-titulo" class="lh-1 lead mb-0 color">una historia de H.G.Oesterheld</p>
+                </div>
+          </section> 
+
+          <div class=" d-none d-lg-block">
+          <section class="row  align-items-center">
+                 <div class="col-lg-8 d-flex flex-column align-items-start mb-2 mb-sm-4">
+                      <h1 id="titulo-2" class="fw-medium mb-0 lh-1">EL <br> ETERNAUTA</h1>
+                      <p id="sub-titulo-2" class="lh-1 lead mb-0 color">una historia de H.G.Oesterheld</p>
+                </div>
+
+                <div class="col-lg-4 text-start">
+                  <p class="fs-5 fw-light">Después de una nevada mortal que acaba con gran parte de la población un grupo de sobrevivientes deberá resistir a una amenaza de otro planeta.</p>
+                 <div class="d-flex gap-2 text-uppercase mb-md-3">                   
+                     <a class="btn btn-primary w-auto fs-6 fw-medium" href="#trailer">ver trailer</a>
+                     <a class="btn btn-primary w-auto fs-6 fw-medium d-none d-sm-block" href="#sec-4">comentar</a>
+                </div>
+                </div>
+          </section>
+          </div>
+
+<section id="carousel-automatico" class="carousel slide rounded-3 overflow-hidden" data-bs-ride="carousel">
+  <div class="carousel-inner ratio ratio-16x9">
+    
+    <figure class="carousel-item active">
+      <img src="./imagenes/retrato-compu.webp" 
+           class="d-none d-xl-block w-100 object-fit-cover rounded-3"
+           alt="protagonista, Juan Salvo, mirando a la cámara">
+      
+      <img src="./imagenes/retrato-tablet.webp" 
+           class="d-none d-md-block d-xl-none w-100 object-fit-cover rounded-3" 
+           alt="protagonista, Juan Salvo, mirando a la cámara">
+      
+      <img src="./imagenes/retrato-celu.webp" 
+           class="d-block d-md-none w-100 object-fit-cover rounded-3" 
+           alt="protagonista, Juan Salvo, mirando a la cámara">
+    </figure>
+
+      <figure class="carousel-item">
+      <img src="./imagenes/puente-saavedra-compu.webp" 
+           class="d-none d-xl-block w-100 object-fit-cover rounded-3"
+           alt="protagonistas observando barricada de automóviles en el puente saavedra">
+      
+      <img src="./imagenes/puente-saavedra-tablet.webp" 
+           class="d-none d-md-block d-xl-none w-100 object-fit-cover rounded-3" 
+           alt="protagonistas observando barricada de automóviles en el puente saavedra">
+      
+      <img src="./imagenes/puente-saavedra-celular.webp" 
+           class="d-block d-md-none w-100 object-fit-cover rounded-3" 
+           alt="-...">
+    </figure>
+
+     <figure class="carousel-item">
+      <img src="./imagenes/caminata-compu.webp" 
+           class="d-none d-xl-block w-100 object-fit-cover rounded-3"
+           alt="protagonista, Juan Salvo, cáminando en la niebe sosteniendo un rifle">
+      
+      <img src="./imagenes/caminata-tablet.webp" 
+           class="d-none d-md-block d-xl-none w-100 object-fit-cover rounded-3" 
+           alt="protagonista, Juan Salvo, cáminando en la niebe sosteniendo un rifle">
+      
+      <img src="./imagenes/caminata-celular.webp" 
+           class="d-block d-md-none w-100 object-fit-cover rounded-3" 
+           alt="protagonista, Juan Salvo, cáminando en la niebe sosteniendo un rifle">
+    </figure>
+
+
   </div>
+</section>  
+    
+<div class="mt-2 mt-sm-3  d-flex justify-content-end gap-2 text-uppercase d-lg-none">
+   <a class="btn btn-primary w-auto fs-6 fw-medium" href="#trailer">ver trailer</a>
+   <a class="btn btn-primary w-auto fs-6 fw-medium d-none d-sm-block" href="#sec-4">comentar</a>
+</div>
+
+</section>
+
+<main id="sec-1" class="container-lg px-4 px-sm-5 mt-4">
+
+
+   <div class="container-fluid mt-2 ">
+             <div class="row text-center">
+             <p class="col p-3  bg-primary-subtle fw-medium">Lanzamiento 30 de abril de 2025</p>
+             <p class="col p-3 bg-primary-subtle fw-medium border border-end-0 border-top-0 border-bottom-0  border-2">Mini-serie: 6 episodios</p>
+             <p class="col p-3 bg-primary-subtle fw-medium d-none d-md-block border-start border-2">Top10 global</p>
+             </div>
+          </div>
+    <h2 class="display-4 border-bottom pb-1">Bajo la nieve</h2> 
+
+     <figure id="marciano-vertical" class="col float-end mb-2 ms-3 d-none d-lg-block ratio-2x3"> 
+      <img class="w-100 img-fluid" src="./imagenes/intento.webp" alt="">
+     </figure>
+
+     <p class="mt-lg-3">La serie <em>El Eternauta</em> reinterpreta una de las historietas más emblemáticas del siglo XX, escrita por <strong>Héctor Germán Oesterheld</strong>, para traerla al presente con una fuerza visual y emocional renovada. Ambientada en un <em>Buenos Aires</em> reconocible y cercano, la historia comienza con un acontecimiento inesperado: una  <strong>nevada misteriosa</strong> que convierte la ciudad en un escenario de peligro y desconcierto. Lo cotidiano se desmorona de un instante a otro, dando paso a una atmósfera de aislamiento, miedo y resistencia.</p>
+
+    <p>En el centro del relato se encuentra <strong>Juan Salvo</strong>, un hombre común que, junto a su familia y amigos, se enfrenta a lo impensado, dando inicio a una odisea que combina el drama íntimo con la lucha colectiva. A través de su mirada, la serie explora la fragilidad de la vida cotidiana y la capacidad humana para sobreponerse incluso en las circunstancias más adversas.</p>
+
+    <p>A medida que el peligro se expande, <em>Buenos Aires</em> se convierte en un personaje más: sus calles vacías, sus casas cerradas y sus monumentos cubiertos de nieve reflejan el colapso de una sociedad que busca mantener el orden ante lo desconocido. En ese paisaje desolado, la <strong>solidaridad</strong> y el ingenio se vuelven herramientas esenciales para sobrevivir, mientras la desconfianza y el temor amenazan con quebrar los lazos que unen a las personas.</p>
+
+      <figure class="d-lg-none w-auto px-0">
+       <img src="./imagenes/marciano-celular.webp" class="img-fluid m-auto d-md-none" alt="...">
+       <img src="./imagenes/marciano-compu.webp" class="img-fluid m-auto d-none d-md-block" alt="...">
+      </figure>
+  
+
+   <div id="desplegable-1" class="d-lg-none">
+    <div class="collapse" id="collapseSeccion1">
+        <div>
+          <p>Uno de los grandes aciertos de <em>El Eternauta</em> es la tensión constante entre lo <em>cotidiano y lo extraordinario</em>. La serie muestra cómo los personajes, despojados de toda certeza, deben adaptarse rápidamente a un entorno hostil y cambiante. Lo que en un principio parece una historia de ciencia ficción se transforma en un retrato profundamente humano sobre la <strong>resistencia y la cooperación.</strong></p>
+
+          <p>El relato avanza con ritmo ágil y cargado de suspenso, pero también se detiene en momentos de introspección que revelan la dimensión moral y emocional del conflicto. La amenaza externa funciona como un espejo que expone las luces y sombras del comportamiento humano: el miedo, la traición, el coraje y la esperanza. Cada episodio profundiza en estos matices, generando un relato que combina acción, emoción y pensamiento crítico.</p>
+
+         <p>En definitiva, <em>El Eternauta</em> no es solo una historia sobre una invasión o un desastre inexplicable, sino una reflexión sobre la <strong>identidad colectiva</strong>, la memoria y la capacidad de los pueblos para <em>resistir</em> unidos ante lo desconocido. Con una realización técnica impecable y una atmósfera cargada de tensión, la serie logra actualizar el mensaje original de Oesterheld, manteniendo vivo su llamado a la solidaridad, la empatía y la lucha compartida.</p>
+        </div>  
+    </div>
+
+    <div id="contenedor-botones-1" class="d-flex justify-content-end gap-2 text-uppercase">
+        <a id="mas-1" class="btn btn-primary" data-bs-toggle="collapse" href="#collapseSeccion1" role="button">ver más</a>
+       
+        <a id="menos-1" class="btn btn-primary align-items-end" data-bs-toggle="collapse" data-bs-target="#collapseSeccion1">        ver menos</a>
+    </div>
+   </div>
+
+    <section class="d-none d-lg-block">
+
+          <p>Uno de los grandes aciertos de <em>El Eternauta</em> es la tensión constante entre lo <em>cotidiano y lo extraordinario</em>. La serie muestra cómo los personajes, despojados de toda certeza, deben adaptarse rápidamente a un entorno hostil y cambiante. Lo que en un principio parece una historia de ciencia ficción se transforma en un retrato profundamente humano sobre la <strong>resistencia y la cooperación.</strong></p>
+
+          <p>El relato avanza con ritmo ágil y cargado de suspenso, pero también se detiene en momentos de introspección que revelan la dimensión moral y emocional del conflicto. La amenaza externa funciona como un espejo que expone las luces y sombras del comportamiento humano: el miedo, la traición, el coraje y la esperanza. Cada episodio profundiza en estos matices, generando un relato que combina acción, emoción y pensamiento crítico.</p>
+
+         <p>En definitiva, <em>El Eternauta</em> no es solo una historia sobre una invasión o un desastre inexplicable, sino una reflexión sobre la <strong>identidad colectiva</strong>, la memoria y la capacidad de los pueblos para <em>resistir</em> unidos ante lo desconocido. Con una realización técnica impecable y una atmósfera cargada de tensión, la serie logra actualizar el mensaje original de Oesterheld, manteniendo vivo su llamado a la solidaridad, la empatía y la lucha compartida.</p>
+    </section> 
+
+</main>
+
+<section id="sec-2" class="container-lg px-4 px-sm-5 section">
+     <h2 class="display-4 mt-3 border-bottom pb-1">Personajes</h2> 
+     <p>En <strong>El Eternauta</strong>, los personajes no son simples testigos de una catástrofe, sino el <strong>corazón mismo del relato</strong>. Cada uno representa una forma distinta de enfrentar lo desconocido: desde la <em>valentía</em> y la <em>solidaridad</em> hasta el <em>miedo</em> y la <em>desesperanza</em>. A través de ellos, la historia muestra cómo lo extraordinario revela la verdadera naturaleza humana.</p>
+
+     <p>En un contexto donde el mundo se desmorona, sus decisiones, vínculos y contradicciones construyen un retrato colectivo de <strong>resistencia</strong>, <strong>empatía</strong> y <strong>transformación</strong>.</p> 
+
+        <section class="container-fluid">
+          <div class="row g-3" id="tarjetas-bg">
+        
+            <div class="col border-0 mb-md-2 ">
+                <article class="card p-0 mx-auto border-0 rounded bg-transparent shadow">
+                   <figure class="m-0">
+                       <img src="./imagenes/darin-tarjeta.webp" class="card-img-top" alt="Juan Salvo">
+                 </figure>
+                   <div class="card-body p-2 w-100 rounded-bottom-3">
+                     <h3 class="card-title mb-1">Juan Salvo</h3>
+                     <p class="mb-1 fw-light">Protágonista</p>
+                     <div class="text-end">
+                        <a class="btn btn-primary p-1 d-inline-block" href="#modalJuanSalvo" role="button" data-bs-toggle="modal" data-bs-target="#modalJuanSalvo">Conocer</a>  
+                    </div>    
+                        
+                  </div>
+                </article>
+            </div>                      
+
+              <div class="col border-0 mb-md-2">
+                <article class="card p-0 mx-auto border-0 rounded bg-transparent shadow">
+                   <figure class="m-0">
+                       <img src="./imagenes/carla-peterson-tarjeta.webp" class="card-img-top" alt="Juan Salvo">
+                 </figure>
+                   <div class="card-body p-2 w-100 rounded-bottom-3">
+                     <h3 class="card-title mb-1">Elena</h3>
+                     <p class="mb-1 fw-light">Co-protagonista</p>
+                     <div class="text-end">
+                        <a class="btn btn-primary p-1 d-inline-block" href="#modalelena" role="button" data-bs-toggle="modal" data-bs-target="#modalelena">Conocer</a>  
+                    </div>    
+                        
+                  </div>
+                </article>
+            </div>
+
+               <div class="col border-0 mb-md-2">
+                <article class="card p-0 mx-auto border-0 rounded bg-transparent shadow">
+                   <figure class="m-0">
+                       <img src="./imagenes/cesar-troncoso-tarjeta.webp" class="card-img-top ratio" alt="Juan Salvo">
+                 </figure>
+                   <div class="card-body p-2 w-100 rounded-bottom-3">
+                     <h3 class="card-title mb-1">Favalli</h3>
+                     <p class="mb-1 fw-light">Personaje secundario</p>
+                     <div class="text-end">
+                        <a class="btn btn-primary p-1 d-inline-block" href="#modalfavalli" role="button" data-bs-toggle="modal" data-bs-target="#modalfavalli">Conocer</a>  
+                    </div>    
+                        
+                  </div>
+                </article>
+            </div>
+
+                <div class="col border-0 mb-md-2">
+                <article class="card p-0 mx-auto border-0 rounded bg-transparent shadow">
+                   <figure class="m-0">
+                       <img src="./imagenes/marcelo-subiotto-tarjeta.webp" class="card-img-top ratio" alt="Juan Salvo">
+                 </figure>
+                   <div class="card-body p-2 w-100 rounded-bottom-3">
+                     <h3 class="card-title mb-1">Lucas</h3>
+                     <p class="mb-1 fw-light">Personaje secundario</p>
+                     <div class="text-end">
+                        <a class="btn btn-primary p-1 d-inline-block" href="#modallucas" role="button" data-bs-toggle="modal" data-bs-target="#modallucas">Conocer</a>  
+                    </div>    
+                        
+                  </div>
+                </article>
+            </div>
+
+           
+               <div class="col border-0 mb-md-2">
+                <article class="card p-0 mx-auto border-0 rounded bg-transparent shadow">
+                  <figure class="m-0">
+                       <img src="./imagenes/staltari-cardena-tarjeta.webp" class="card-img-top ratio" alt="Juan Salvo">
+                 </figure>
+                   <div class="card-body p-2 w-100 rounded-bottom-3">
+                     <h3 class="card-title mb-1">Omar e Inga</h3>
+                     <p class="mb-1 fw-light">personajes secundarios</p>
+                     <div class="text-end">
+                        <a class="btn btn-primary p-1 d-inline-block" href="#omareinga" role="button" data-bs-toggle="modal" data-bs-target="#omareinga">Conocer</a>  
+                    </div>    
+                        
+                  </div>
+                </article>
+            </div>
+         </div>  
+         
+    <div>
+
+              <div class="modal fade shadow p-3 mb-5" id="modalJuanSalvo" aria-labelledby="modalJuanSalvo" aria-hidden="true">
+                 <div class="modal-dialog modal-dialog-centered">
+                   <section class="modal-content ">
+                       <header class="modal-header border-primary border-bottom">
+                           <h3 class="modal-title">Juan Salvo</h3>
+                       </header>
+            
+                       <div class="modal-body">                        
+                       <p class="fw-light mb-2">Interpretado por: Ricardo Darín</p>
+                        <p class="mb-0 fw-normal">Hombre común convertido en líder por necesidad. Su lucha no busca gloria, sino proteger a los suyos y mantener viva la idea de comunidad en medio del horror.</p>
+                        </div>  
+                        
+                        <footer class="modal-footer pt-0 border-top border-primary">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                       </footer>
+                     </section>
+                 </div>
+              </div>              
+
+
+              <div class="modal fade shadow p-3 mb-5" id="modalelena" aria-labelledby="modalelena" aria-hidden="true">
+                 <div class="modal-dialog modal-dialog-centered">
+                   <section class="modal-content ">
+                       <header class="modal-header border-primary border-bottom">
+                           <h3 class="modal-title">Elena</h3>
+                       </header>
+            
+                       <div class="modal-body">
+                       <p class="fw-light mb-2">Interpretado por: Carla Peterson</p>
+                        <p class="mb-0 fw-normal">Médica, madre y sostén del grupo. Su empatía se vuelve resistencia cuando la ciencia y la razón ya no alcanzan. Actúa desde la compasión y la responsabilidad colectiva</p>
+                        </div>  
+                        
+                        <footer class="modal-footer pt-0 border-top border-primary">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                       </footer>
+                     </section>
+                 </div>
+              </div>              
+
+ 
+              <div class="modal fade shadow p-3 mb-5" id="modalfavalli" aria-labelledby="modalfavalli" aria-hidden="true">
+                 <div class="modal-dialog modal-dialog-centered">
+                   <section class="modal-content ">
+                       <header class="modal-header border-primary border-bottom">
+                           <h3 class="modal-title">Favalli</h3>
+                       </header>
+            
+                       <div class="modal-body">
+                       <p class="fw-light mb-2">Interpretado por: César Troncoso</p>
+                        <p class="mb-0 fw-normal">Profesor de física, racional y metódico. Su mente brillante permite que el grupo sobreviva, aunque su lucidez lo condena a entender demasiado.</p>
+                        </div>  
+                        
+                        <footer class="modal-footer pt-0 border-top border-primary">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                       </footer>
+                     </section>
+                 </div>
+              </div> 
+
+
+              <div class="modal fade shadow p-3 mb-5" id="modallucas" aria-labelledby="modallucas" aria-hidden="true">
+                 <div class="modal-dialog modal-dialog-centered">
+                   <section class="modal-content ">
+                       <header class="modal-header border-primary border-bottom">
+                           <h3 class="modal-title">Lucas</h3>
+                       </header>
+            
+                       <div class="modal-body">
+                       <p class="fw-light mb-2">Interpretado por: Marcelo Subiotto</p>
+                        <p class="mb-0 fw-normal">Docente y activista, defiende sus principios incluso cuando el mundo se desmorona. Idealista, crítico y profundamente humano, es la conciencia moral del grupo</p>
+                        </div>  
+                        <footer class="modal-footer pt-0 border-top border-primary">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                       </footer>
+                     </section>
+                 </div>
+              </div> 
+
+
+              <div class="modal fade shadow p-3 mb-5" id="omareinga" aria-labelledby="omareinga" aria-hidden="true">
+                 <div class="modal-dialog modal-dialog-centered">
+                   <section class="modal-content ">
+                       <header class="modal-header border-primary border-bottom">
+                           <h3 class="modal-title">Omar e Inga</h3>
+                       </header>
+            
+                       <div class="modal-body">
+                       <p class="fw-light mb-2">Interpretados por: Ariel Staltari y  Orianna Cárdenas</p>
+                        <p class="mb-0 fw-normal">Dos sobrevivientes que representan al pueblo y a la nueva Argentina.Omar, trabajador y migrante retornado, encarna la experiencia y la perseverancia del que nunca se rinde. Inga, joven repartidora venezolana, simboliza la energía y diversidad de una generación que aprendió a resistir antes del fin del mundo.</p>
+                        </div>  
+                        
+                        <footer class="modal-footer pt-0 border-top border-primary">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                       </footer>
+                     </section>
+                 </div>
+              </div>          
+    </div>              
+        </section>
+
+</section>
+
+<section id="sec-3" class="container-lg px-4 px-sm-5 section">
+  <h2 class="display-4 border-bottom pb-1">Producción</h2>
+
+  <p>La producción de <em>El Eternauta</em>, desarrollada por <strong>Netflix</strong> en colaboración con <strong>K&amp;S Films</strong>, representa un punto de inflexión para la industria audiovisual argentina. El proyecto demandó un nivel de planificación y recursos pocas veces visto en el país, con la construcción de grandes sets que recrean espacios emblemáticos de <em>Buenos Aires</em>. Estas locaciones permiten combinar el <strong>realismo urbano</strong> con una estética de <em>ciencia ficción</em>, creando un universo visual que se siente a la vez cercano y extraordinario.</p>
+
+  <p>Uno de los aspectos más innovadores fue la incorporación de <strong>pantallas LED de gran escala</strong>, una tecnología utilizada en producciones internacionales de alto presupuesto. Este sistema posibilitó la <em>integración de escenarios virtuales en tiempo real</em> reduciendo la dependencia de los fondos digitales en posproducción y otorgando mayor naturalidad a la interacción entre actores y entornos.</p>
+
+  <section id="trailer" class="rounded-3 overflow-hidden mb-3">
+      <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/Y5fbyh_xPXo?autoplay=1&muted=1si=Y-eGfVAOIUqvT5gH&amp;controls=0" allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
   </section>
 
-<section id="personajes" class="character-section">
-  <h1 class="text-center reveal">Personajes</h1>
-        <div class="container">
-            <div class="row">
-                <!-- Carta 1 -->
-                <div class="col-6 col-md-6 col-lg-4 reveal">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                 <picture>
-                                  <source srcset="assets/img/character_merlina-baja.jpg" media="(max-width: 767.98px)">
-                                  <source srcset="assets/img/character_merlina-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-                                  <source srcset="assets/img/character_merlina.jpg" media="(min-width: 1200px)">
-                                 <img src="assets/img/character_merlina.jpg" alt="Merlina">
-                                  </picture>
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Merlina Addams</h3>
-                                <p>Hija de Morticia y Gómez, estudiante de Nevermore. Inteligente, sarcástica y con una mente brillante para resolver misterios.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Carta 2 -->
-                <div class="col-6 col-md-6 col-lg-4 reveal reveal-delay-1">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                 <picture>
-                                  <source srcset="assets/img/character_enid-baja.jpg" media="(max-width: 767.98px)">
-                                  <source srcset="assets/img/character_enid-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-                                  <source srcset="assets/img/character_enid.jpg" media="(min-width: 1200px)">
-                                 <img src="assets/img/character_enid.jpg" alt="Enid">
-                                  </picture>
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Enid Sinclair</h3>
-                                <p>Compañera de cuarto de Merlina en Nevermore. Alegre, optimista y el contrapunto luminoso del mundo gótico que la rodea.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Carta 3 -->
-                <div class="col-6 col-md-6 col-lg-4 reveal reveal-delay-2">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                 <picture>
-                                  <source srcset="assets/img/character_morticia-baja.jpg" media="(max-width: 767.98px)">
-                                  <source srcset="assets/img/character_morticia-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-                                  <source srcset="assets/img/character_morticia.jpg" media="(min-width: 1200px)">
-                                 <img src="assets/img/character_morticia.jpg" alt="Morticia">
-                                  </picture>
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Morticia Addams</h3>
-                                <p>Madre de Merlina y matriarca de la familia Addams. Elegante, serena y con una fascinación natural por lo oscuro.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Carta 4 -->
-                <div class="col-6 col-md-6 col-lg-4 reveal reveal-delay-1">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                 <picture>
-                                  <source srcset="assets/img/character_thing-baja.jpg" media="(max-width: 767.98px)">
-                                  <source srcset="assets/img/character_thing-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-                                  <source srcset="assets/img/character_thing.jpg" media="(min-width: 1200px)">
-                                 <img src="assets/img/character_thing.jpg" alt="Thing">
-                                  </picture>
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Dedos</h3>
-                                <p>Sirviente y amigo leal de los Addams. Ingenioso, expresivo y siempre dispuesto a ayudar con una mano.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Carta 5 -->
-                <div class="col-6 col-md-6 col-lg-4 reveal reveal-delay-2">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                 <picture>
-                                  <source srcset="assets/img/character_agnes-baja.jpg" media="(max-width: 767.98px)">
-                                  <source srcset="assets/img/character_agnes-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-                                  <source srcset="assets/img/character_agnes.jpg" media="(min-width: 1200px)">
-                                 <img src="assets/img/character_agnes.jpg" alt="Agnes">
-                                  </picture>
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Agnes Thornfield</h3>
-                                <p>Estudiante y amiga de Merlina. Puede volverse invisible. Tímida, curiosa y usa su habilidad para espiar o escapar.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Carta 6 -->
-                <div class="col-6 col-md-6 col-lg-4 reveal reveal-delay-3">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                 <picture>
-                                  <source srcset="assets/img/character_tyler-baja.jpg" media="(max-width: 767.98px)">
-                                  <source srcset="assets/img/character_tyler-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-                                  <source srcset="assets/img/character_tyler.jpg" media="(min-width: 1200px)">
-                                 <img src="assets/img/character_tyler.jpg" alt="Tyler">
-                                  </picture>
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Tyler Galpin</h3>
-                                <p>Hijo del sheriff de Jericho y amigo de Merlina. Carismático, enigmático y con un pasado que esconde secretos.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
+          <div class="container-fluid mt-2">
+             <div class="row text-center">
+             <p class="col p-3 p-md-4 bg-primary-subtle">inversión de <span class="h4">15 millones</span> de dólares</p>
+             <p class="col p-3 p-md-4 bg-primary-subtle  border border-end-0 border-top-0 border-bottom-0  border-2">alrededor de <span class="h4">2.900 personas</span> involucradas</p>
+             <p class="col p-4 bg-primary-subtle d-none d-sm-block border-start border-2"><span class="h4">18 meses</span> de post-producción</p>
+             </div>
+          </div>
 
-<section id="nota" class="container">
-  <div class="text-center p-3">
-    <h1 class="text-center reveal">Merlina Temporada 2</h1>
-    <p class="text-center reveal reveal-delay-1">
-      <span class="by">by</span> Tomi Caruso
-      <span class="date">26 OCT 2025</span>
-    </p>
-  </div>
+  <div id="desplegable-3">
+    <div class="collapse container-fluid" id="collapseSeccion3">
+        <div class="row">
+           <p class="col-12 col-md-6">Bajo la dirección de <strong>Bruno Stagnaro</strong>, el rodaje se extendió durante varios meses y supuso una logística compleja, tanto en exteriores como en estudios. Se emplearon <em>cámaras de última generación</em> con sensores de alta resolución para capturar la riqueza visual y garantizar la coherencia cromática de cada secuencia, clave para mantener la atmósfera envolvente de la historia.</p>
 
-  <div class="clearfix reveal reveal-delay-2">
-    <picture>
-    <source srcset="assets/img/article_img1-baja.jpg" media="(max-width: 767.98px)">
-    <source srcset="assets/img/article_img1-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-    <source srcset="assets/img/article_img1.jpg" media="(min-width: 1200px)">
-    <img src="assets/img/article_img1.jpg" alt="Nota 1">
-    </picture>
-    <input type="checkbox" id="toggle-nota1" class="leer-mas-toggle">
-
-    <div class="nota-texto">
-      <p><strong>Tras los sucesos de la primera temporada</strong>, Merlina regresa a la Academia Nevermore decidida a concentrarse en sus estudios y evitar nuevos dramas. Sin embargo, pronto descubre que el ambiente en la escuela ha cambiado: un nuevo director impone reglas rígidas y hay una sensación constante de que algo oscuro se esconde entre los pasillos.</p>
-
-      <p>A medida que investiga, la joven descubre rastros de una antigua sociedad secreta ligada al pasado de Nevermore y a su propia familia. Sus intentos por desenmascarar la verdad la enfrentan con sus compañeros y con sus propios límites. La <em>desconfianza crece</em>, los lazos se tensan, y el humor ácido que la caracteriza se convierte en su mejor defensa frente a lo desconocido.</p>
-
-      <p>La temporada explora un costado más íntimo de Merlina, mostrando las grietas detrás de su aparente <em>frialdad</em>. Enid, siempre optimista, sigue siendo su contrapunto y su cable a tierra, mientras nuevos personajes irrumpen con <strong>intenciones ambiguas</strong>. Entre rituales, secretos y visiones del pasado, Merlina se ve forzada a preguntarse qué tanto de su destino está bajo su control.</p>
+           <p class="mb-1 col-12 col-md-6">A estos recursos se sumó un meticuloso trabajo de <strong>efectos visuales (VFX)</strong> y <strong>sonido</strong>, diseñados para potenciar la inmersión del espectador sin perder el anclaje realista del relato. Esta serie no solo actualiza un clásico fundamental de la historieta argentina, sino que establece un nuevo estándar técnico y artístico que proyecta al país hacia una escala de producción internacional.</p>
+        </div>  
     </div>
 
-    <label for="toggle-nota1" class="leer-mas-btn">Leer más ↓</label>
-  </div>
-</section>
-
-
-<section id="nota" class="container">
-  <div class="text-center p-3"></div>
-
-  <div class="clearfix reveal nota-dos">
-    <picture>
-      <source srcset="assets/img/article_img2-baja.jpg" media="(max-width: 767.98px)">
-      <source srcset="assets/img/article_img2-media.jpg" media="(min-width: 768px) and (max-width: 1199.98px)">
-      <source srcset="assets/img/article_img2.jpg" media="(min-width: 1200px)">
-      <img src="assets/img/article_img2.jpg" alt="Nota 2">
-    </picture>
-
-    <input type="checkbox" id="toggle-nota2" class="leer-mas-toggle">
-
-    <div class="nota-texto">
-      <h2><strong>Sombras del linaje</strong></h2>
-
-      <p>Cuando una serie de fenómenos sobrenaturales sacude <em>Nevermore</em>, Merlina descubre que la amenaza que los acecha está ligada a una maldición que pesa sobre su familia. Su búsqueda de respuestas la conduce a un territorio peligroso, donde la línea entre la lógica y la locura se vuelve difusa.</p>
-                    
-      <p>Mientras intenta mantener su independencia, Merlina comienza a comprender que no todo puede resolverse con <em>inteligencia o sarcasmo</em>. Los vínculos que ha formado se vuelven su mayor fortaleza, aunque también su mayor vulnerabilidad. Enfrentarse a la oscuridad implica reconocer que no todo <strong>monstruo</strong> es externo: algunos habitan dentro de uno mismo.</p>
-                    
-      <p>El final de temporada deja un sabor agridulce: algunos misterios se resuelven, otros apenas comienzan. Pero lo que queda claro es que <strong>Merlina ha cambiado</strong>. Sigue siendo la mente brillante y sarcástica que todos temen y admiran, aunque ahora carga con un conocimiento más profundo y <em>más peligroso</em> sobre quién es realmente.</p>
+    <div id="contenedor-botones-3" class="d-flex justify-content-end gap-2 text-uppercase">
+        <a id="mas-3" class="btn btn-primary" data-bs-toggle="collapse" href="#collapseSeccion3" role="button">ver más</a>
+       
+        <a id="menos-3" class="btn btn-primary align-items-end" data-bs-toggle="collapse" data-bs-target="#collapseSeccion3">ver menos</a>
     </div>
 
-    <label for="toggle-nota2" class="leer-mas-btn">Leer más ↓</label>
-  </div>
+
+   </div>
 </section>
 
-  <section id="trailer" class="py-5 trailer-section" aria-labelledby="trailer-title">
-  <div class="trailer-bg">
+<section id="sec-4" class="px-4 px-sm-5 container-lg section">
+    <h2 class="display-4 mt-3 border-bottom pb-1 mt-3 text-start">Queremos saber tu opinión</h2>
+    <p class="h3 fw-light">¿Disfrutaste la serie? ¡Nos encantaría saber tu opinión!</p>
+    <p>Déjanos tu <strong>comentario sobre qué te pareció</strong> y cuáles son tus expectativas para las <em>próximas temporadas</em><p>
 
-    <picture>
-      <source srcset="assets/img/arbolesizquierda-baja.png" media="(max-width: 767.98px)">
-      <source srcset="assets/img/arbolesizquierda-media.png" media="(min-width: 768px) and (max-width: 1199.98px)">
-      <source srcset="assets/img/arbolesizquierda.png" media="(min-width: 1200px)">
-     <img src="assets/img/arbolesizquierda.png" alt="Árboles izquierda" class="arbol-bg arbol-izquierda">
-    </picture>
+    <div class="bg-primary-subtle p-3 py-4 rounded-4 mx-auto shadow" id="formulario">
+    <form action="formulario.php" method="POST" class="needs-validation" novalidate>
+      
+  <div class="container p-0 m-0">
+    <div class="row">
+      <div class=" col-12 col-md-6 mb-3 mb-sm-4">
+        <label for="nombre" class="h5 fw-medium primary-text-emphasis">Nombre completo</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre va aquí" required>
+        <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
+      </div>
 
-    <picture>
-      <source srcset="assets/img/arbolesderecha-baja.png" media="(max-width: 767.98px)">
-      <source srcset="assets/img/arbolesderecha-media.png" media="(min-width: 768px) and (max-width: 1199.98px)">
-      <source srcset="assets/img/arbolesderecha.png" media="(min-width: 1200px)">
-     <img src="assets/img/arbolesderecha.png" alt="Árboles derecha" class="arbol-bg arbol-derecha">
-    </picture>
-
-  </div>
-
-  <div class="container position-relative">
-    <h2 id="trailer-title" class="section-title text-center mb-4 reveal">Nueva temporada</h2>
-    <p class="text-center mb-3 reveal reveal-delay-1">Mira el tráiler oficial</p>
-
-    <div class="ratio ratio-16x9 mx-auto reveal reveal-delay-1" style="max-width: 1000px;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/-05Jdrrb9MQ?si=8jL6RR_ZsmGCYH72"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-
-
- <div id="reseñas" class="team-boxed">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center reveal">Reseñas</h2>
-                <p class="text-center reveal reveal-delay-1">Sin spoilers sobre la temporada 2 de Merlina</p>
-            </div>
-            <div class="row people">
-                <div class="col-md-4 col-lg-4 item reveal">
-                    <div class="box">
-                      <picture>
-                        <source srcset="assets/img/teen3-media-baja.png" media="(max-width: 767.98px)">
-                        <source srcset="assets/img/teen3-media-baja.png" media="(min-width: 768px) and (max-width: 1199.98px)">
-                        <source srcset="assets/img/teen3.png" media="(min-width: 1200px)">
-                      <img class="rounded-circle" src="assets/img/teen3.png">
-                      </picture>
-                        <h3 class="name">Gomez Milagros</h3>
-                        <p class="title">Fan Oficial</p>
-                        <p class="description">Una segunda temporada que mantiene el tono gótico y detective de la primera, pero acelera el ritmo con nuevos misterios y giros que profundizan tanto en los personajes como en sus conflictos sobrenaturales, entre otros mas.</p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 item reveal reveal-delay-1">
-                    <div class="box">
-                      <picture>
-                        <source srcset="assets/img/teen1-media-baja.png" media="(max-width: 767.98px)">
-                        <source srcset="assets/img/teen1-media-baja.png" media="(min-width: 768px) and (max-width: 1199.98px)">
-                        <source srcset="assets/img/teen1.png" media="(min-width: 1200px)">
-                      <img class="rounded-circle" src="assets/img/teen1.png">
-                      </picture>
-                        <h3 class="name">Zaballeta Magalí</h3>
-                        <p class="title">Newbie</p>
-                        <p class="description">Si bien algunos elementos pueden sentirse familiares, la temporada se atreve a ampliar el universo y plantea preguntas más complejas, dejando parada una nueva dirección que promete mayor riesgo en futuras entregas.</p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 item reveal reveal-delay-2">
-                    <div class="box">
-                      <picture>
-                        <source srcset="assets/img/teen2-media-baja.png" media="(max-width: 767.98px)">
-                        <source srcset="assets/img/teen2-media-baja.png" media="(min-width: 768px) and (max-width: 1199.98px)">
-                        <source srcset="assets/img/teen2.png" media="(min-width: 1200px)">
-                      <img class="rounded-circle" src="assets/img/teen2.png">
-                      </picture>
-                        <h3 class="name">Corrales Joaquín</h3>
-                        <p class="title">Fan Leal</p>
-                        <p class="description">El elenco continúa brillando, con una protagonista cuya evolución personal se refleja en una trama que mezcla amenazas externas e internas; la atmósfera oscura-humorada sigue siendo un gran atractivo. </p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-  <section id="contacto" class="py-5" aria-labelledby="contacto-title">
-    <div class="container">
-      <h2 id="contacto-title" class="section-title text-center mb-4 reveal">Contacto</h2>
-
-      <div class="row justify-content-center reveal reveal-delay-1">
-        <div class="col-12 col-md-8">
-          <form action="mailto:tomas.caruso@davinci.edu.ar" method="post" enctype="text/plain" class="needs-validation" novalidate>
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" id="nombre" name="nombre" class="form-control" required maxlength="60" aria-required="true">
-                <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
-              </div>
-              <div class="col-md-6">
-                <label for="apellido" class="form-label">Apellido</label>
-                <input type="text" id="apellido" name="apellido" class="form-control" required maxlength="60" aria-required="true">
-                <div class="invalid-feedback">Por favor ingresa tu apellido.</div>
-              </div>
-
-              <div class="col-12">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" name="email" class="form-control" required maxlength="120" aria-required="true">
-                <div class="invalid-feedback">Ingrese un correo válido.</div>
-              </div>
-
-              <div class="col-12">
-                <label for="comentario" class="form-label">Comentario</label>
-                <textarea id="comentario" name="comentario" class="form-control" rows="6" required maxlength="1000" aria-required="true"></textarea>
-                <div class="invalid-feedback">Escribe tu mensaje.</div>
-              </div>
-
-              <div class="col-12 text-end">
-                <button type="submit" class="btn btn-outline-light">Enviar</button>
-              </div>
-            </div>
-          </form>
-        </div>
+  
+      <div class=" col-12 col-md-6 mb-3 mb-sm-4">
+        <label for="email" class="h5 fw-medium primary-text-emphasis">Correo electrónico</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+        <div class="invalid-feedback">tu correo electrónico no es válido</div>
       </div>
     </div>
-  </section>
-
-
-  <div class="cementery-wrap" aria-hidden="true">
-    <picture>
-      <source srcset="assets/img/cementery-media-baja.png" media="(max-width: 767.98px)">
-      <source srcset="assets/img/cementery-media-baja.png" media="(min-width: 768px) and (max-width: 1199.98px)">
-      <source srcset="assets/img/cementery.png" media="(min-width: 1200px)">
-     <img src="assets/img/cementery.png" alt="Cementerio decorativo" class="cementery-img">
-    </picture>
   </div>
-  <footer class="bg-black text-light py-4">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-3 mb-md-0">
-          <p class="mb-0">Tomas Caruso — Maquetado y Desarrollo Web — DMM2AP — 2025</p>
-        </div>
-        <div class="col-md-6 text-md-end">
-          <a href="https://www.instagram.com/" class="me-2" aria-label="Instagram" target="_blank" rel="noopener">
-            <img src="assets/img/instragam_logo.png" alt="Instagram" width="36" height="36">
-          </a>
-          <a href="https://www.facebook.com/" class="me-2" aria-label="Facebook" target="_blank" rel="noopener">
-            <img src="assets/img/facebook_logo.png" alt="Facebook" width="36" height="36">
-          </a>
-          <a href="https://www.netflix.com/" aria-label="Netflix" target="_blank" rel="noopener">
-            <img src="assets/img/netflix_logo_N.png" alt="Netflix" width="36" height="36">
-          </a>
-        </div>
-      </div>
+
+    <div class="mb-3 mb-sm-4" id="check-area">
+        <label class="h5 fw-medium primary-text-emphasis">¿Cómo calificarías la serie?</label>
+        <div class="d-flex gap-2 gap-sm-3 flex-wrap justify-content-around py-2">
+        
+
+          <div class="form-check">
+            <input class="form-check-input agrandado me-2" type="radio" name="calificacion" id="mala" value="mala" required>
+            <label class="form-check-label primary-text-emphasis fs-sm-5" for="mala">Mala</label> 
+             <div class="invalid-feedback">selecciona una calificación.</div>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input agrandado me-2" type="radio" name="calificacion" id="regular" value="regular" required>
+            <label class="form-check-label primary-text-emphasis fs-sm-5" for="regular">Regular</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input agrandado me-2" type="radio" name="calificacion" id="buena" value="buena" required>
+            <label class="form-check-label primary-text-emphasis fs-sm-5" for="buena">Buena</label>
+          </div>
+
+         </div>
     </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+      <div class="pb-3 mb-3 mb-sm-4 border-bottom">
+        <label for="mensaje" class="h5 fw-medium primary-text-emphasis">Mensaje</label>
+        <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+        <div class="invalid-feedback">Por favor, escribe un mensaje.</div>
+      </div>
 
-  <script>
-  const carousel = document.querySelector('#carouselExampleCaptions');
-  if (carousel) {
-    new bootstrap.Carousel(carousel, {
-      interval: 6000, // 6 segundos
-      ride: 'carousel',
-      pause: false
-    });
-  }
-</script>
+      <div class="d-flex justify-content-end gap-2">
+         <button type="reset" class="btn btn-outline-secondary">Borrar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+
+    </form>
+    </div>
+
+</section>
+
+
+<div class="contenedor-subir overflow-hidden">
+  <a href="#" class="shadow-lg subir-1"><img src="./imagenes/subir-xl.png" class="d-none d-md-block" alt=""></a>
+  <a href="#" class="shadow-lg subir-2"><img src="./imagenes/subir-s.png" class="d-block d-md-none" alt="" ></a>
+</div>
+
+
+<footer class="container-fluid text-center py-3 border-top mt-5 container-lg section align-items-center">
+    <div class="d-flex justify-content-between align-items-center py-3">
+
+        <div class="">
+            <ul class="list-inline mb-0 ">
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/" target="_blank" class="text-decoration-none border-0"> 
+                      <img src="./imagenes/insta-xl.png" class="border-0  d-none d-md-block" alt="Instagram">
+                      <img src="./imagenes/insta-s.png" class="border-0 d-block d-md-none" alt="Instagram">
+                       
+                    </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <img src="./imagenes/face-xl.png" class="border-0  d-none d-md-block" alt="facebook">
+                      <img src="./imagenes/face-s.png" class="border-0 d-block d-md-none" alt="facebook">
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://x.com/" target="_blank">
+                        <img src="./imagenes/x-xl.png" class="border-0  d-none d-md-block" alt="twitter">
+                      <img src="./imagenes/x-s.png" class="border-0 d-block d-md-none" alt="twitter">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12 text-center">
+            <small>&copy; Dante Cammareri - maquetado y desarrollo web - 2025 - [DMMA2P]</small>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
+    (function () {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
 
-  const revealOnScroll = () => {
-    const triggerBottom = window.innerHeight * 0.85;
-
-    reveals.forEach(el => {
-      const boxTop = el.getBoundingClientRect().top;
-      if (boxTop < triggerBottom) {
-        el.classList.add('active');
-      } else {
-        el.classList.remove('active');
-      }
-    });
-  };
-
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
-</script>
-
-<script>
-// Validación Bootstrap + alerta personalizada // 
-(() => {
-  'use strict';
-
-  const forms = document.querySelectorAll('.needs-validation');
-
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      event.preventDefault(); // Siempre prevenir el envío por defecto
-      event.stopPropagation();
-
-      if (!form.checkValidity()) {
-        // Si hay errores, mostrar los estilos de error
-        form.classList.add('was-validated');
-      } else {
-        // Si el formulario es válido:
-        form.classList.remove('was-validated'); // Limpia los estilos rojos
-
-        // Mostrar alerta Bootstrap bonita
-        const alertBox = document.createElement('div');
-        alertBox.className = 'alert alert-success alert-dismissible fade show mt-3 text-center';
-        alertBox.role = 'alert';
-        alertBox.innerHTML = `
-          <strong>Merlina Fan-Page Team dice:</strong> Formulario enviado correctamente ✅
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
-        `;
-
-        // Insertar la alerta justo debajo del formulario
-        form.parentNode.insertBefore(alertBox, form.nextSibling);
-
-        // Resetear los campos
-        form.reset();
-
-        // Quitar cualquier mensaje de error residual
-        setTimeout(() => {
-          form.querySelectorAll('.is-invalid, .is-valid').forEach(el => {
-            el.classList.remove('is-invalid', 'is-valid');
-          });
-        }, 100);
-      }
-    }, false);
-  });
-})();
-</script>
-
- </body>
+</body>
+</html>
